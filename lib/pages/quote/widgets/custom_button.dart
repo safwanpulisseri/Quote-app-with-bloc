@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:quotes_app_with_bloc/pages/quote/bloc/bloc/quote_bloc.dart';
 
 class CustomButton extends StatelessWidget {
   const CustomButton({super.key});
@@ -7,7 +9,7 @@ class CustomButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkResponse(
       onTap: () {
-        //logic
+        BlocProvider.of<QuoteBloc>(context).add(QuoteRequestEvent());
       },
       child: Material(
         elevation: 20,

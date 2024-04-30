@@ -11,13 +11,19 @@ class QuoteWidget extends StatelessWidget {
       borderRadius: BorderRadius.circular(15),
       child: Container(
         decoration: BoxDecoration(
-          color: Colors.blueGrey,
+          color: Colors.blueAccent,
           borderRadius: BorderRadius.circular(15),
         ),
         child: Padding(
-          padding: const EdgeInsets.all(20),
-          child: Center(
-            child: Text(quote),
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+          child: Text(
+            '''"$quote"''',
+            textAlign: TextAlign.center,
+            style: const TextStyle(
+              fontSize: 17,
+              fontWeight: FontWeight.w500,
+              color: Colors.black,
+            ),
           ),
         ),
       ),
